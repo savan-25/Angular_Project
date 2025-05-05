@@ -1,0 +1,41 @@
+<div>
+  <h2>CRUD Table</h2>
+
+  <button (click)="Read()">Read Data</button>
+  <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" [(ngModel)]="newData.name" name="name" formControlName="name" required>
+    <div *ngIf="reactiveForm.get('name').invalid && reactiveForm.get('name').touched">
+
+      <small *ngIf="reactiveForm.get('name').errors['required']">Name is required.</small>
+      <small *ngIf="reactiveForm.get('name').errors['minLength']">Name must be at least 4 characters long.</small>
+    </div>
+   
+    <label for="email">Email:</label>
+    <input type="email" id="email" [(ngModel)]="newData.email" name="email" formControlName="email" required>
+    <div *ngIf="reactiveForm.get('email').invalid && reactiveForm.get('email').touched">
+      
+      <small *ngIf="reactiveForm.get('email').errors['required']">Email is required.</small>
+      <small *ngIf="reactiveForm.get('email').errors['email']">Please enter a valid email address.</small>
+    </div>
+    <button type="submit">Add Data</button>
+  </form>
+  
+  <table border="1">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Actions</th>
+    </tr>
+    <tr *ngFor="let item of data">
+      <td>{{item.id}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.email}}</td>
+      <td>
+        <button (click)="emitData(item)">Edit</button>
+        <button (click)="deleteData(item.id)">Delete</button>
+      </td>
+    </tr>
+  </table>
+</div>
