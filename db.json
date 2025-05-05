@@ -10,11 +10,11 @@
     },
     {
       "id": "4",
-      "name": "Shereton Grand",
-      "address": "Koregaon park",
-      "email": "GrandInfo@gmail.com",
-      "services": "contenental",
-      "mobile": 7020702070
+      "name": "Ruchira",
+      "address": "Ahilynagar",
+      "email": "Ruchi@gmail.com",
+      "services": "biryani",
+      "mobile": 9023432804
     }
   ],
   "signup": [
@@ -38,6 +38,20 @@
       "email": "ssava@gmail.com",
       "mobile": 7058439168,
       "password": "Savan@25"
+    },
+    {
+      "id": "4c46",
+      "name": "savan",
+      "email": "savansumbe@gmail.com",
+      "mobile": 7058439168,
+      "password": "Savan@25"
+    },
+    {
+      "id": "35d9",
+      "name": "v",
+      "email": "Viraj",
+      "mobile": 33,
+      "password": "56"
     }
   ],
   "Contacts": [

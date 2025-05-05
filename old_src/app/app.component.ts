@@ -3,10 +3,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  standalone : false
+  standalone: false,
+  styleUrl: './app.component.css'
 })
-export class AppComponent 
-{
-  title = 'MarvellousRestaurentApp';
+export class AppComponent {
+  title = 'Angular_Project';
 }
